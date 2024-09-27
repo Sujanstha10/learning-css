@@ -1,0 +1,40 @@
+.btn {
+    background-color: azure;
+    text-transform: uppercase;
+    font-family: "lato";
+    border: none;
+    padding: 1.9rem 2.8rem; /* 19px 28px */
+    font-weight: 450;
+    border-radius: 10rem; /* 100px */
+    transition: all 0.8s;
+    animation: moveToUp 1s ease-out 1s;
+    position: relative;
+    animation-fill-mode: backwards;
+
+    &::after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      border-radius: 10rem; /* 100px */
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.5s;
+      display: inline-block;
+      background-color: white;
+    }
+    &:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+    &:hover {
+      transform: translateY(-0.5rem); /* -2px */
+      box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2); /* 0 10px 15px */
+    }
+
+    &:active {
+      transform: translateY(-0.3rem); /* -1px */
+      box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); /* 0 5px 5px */
+    }
+  }

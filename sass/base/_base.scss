@@ -1,0 +1,18 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Set the root font-size to 62.5%, which is equivalent to 10px.
+   This allows easier conversion between `rem` units and pixels, 
+   where 1rem will equal 10px, making calculations simpler. */
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  box-sizing: border-box;
+}
