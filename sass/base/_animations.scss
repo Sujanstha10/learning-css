@@ -1,38 +1,64 @@
+// Animation that moves the element from left to right
 @keyframes moveToLeft {
+  // At the start of the animation (0%),
+  // the element is fully transparent (opacity: 0)
+  // and moved 10rem (-100px) to the left.
   0% {
     opacity: 0;
     transform: translateX(-10rem); /* -100px */
   }
+
+  // At 80% of the animation, the element is mostly visible (opacity: 0.8)
+  // and slightly moved to the right by 0.3rem (3px).
   80% {
     opacity: 0.8;
     transform: translateX(0.3rem); /* 3px */
   }
+
+  // At the end of the animation (100%),
+  // the element is fully visible (opacity: 1)
+  // and back in its original position (translate(0)).
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
 
+// Animation that moves the element from right to left
 @keyframes moveToRight {
+  // At the start (0%), the element is fully transparent (opacity: 0)
+  // and moved 10rem (100px) to the right.
   0% {
     opacity: 0;
     transform: translateX(10rem); /* 100px */
   }
+
+  // At 80%, the element becomes mostly visible (opacity: 0.8)
+  // and slightly moves to the left by 0.3rem (-3px).
   80% {
     opacity: 0.8;
     transform: translateX(-0.3rem); /* -3px */
   }
+
+  // At 100%, the element is fully visible (opacity: 1)
+  // and back to its original position.
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
 
+// Animation that moves the element from bottom to top
 @keyframes moveToUp {
+  // At the start (0%), the element is fully transparent (opacity: 0)
+  // and moved 4rem (40px) downward.
   0% {
     opacity: 0;
     transform: translateY(4rem); /* 40px */
   }
+
+  // At the end of the animation (100%), the element is fully visible (opacity: 1)
+  // and back in its original vertical position.
   100% {
     opacity: 1;
     transform: translate(0);

@@ -1,0 +1,13 @@
+// A mixin to clear floats and ensure the parent container
+// expands to contain floated children elements.
+@mixin clearFix {
+  // Use the ::after pseudo-element to insert content after the floated elements.
+  &::after {
+    // An empty content value is required to make the pseudo-element work.
+    content: "";
+    // Create a block formatting context to enclose floated children.
+    display: table;
+    // Clear any floats inside the parent container (both left and right floats).
+    clear: both;
+  }
+}
