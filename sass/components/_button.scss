@@ -10,6 +10,8 @@
   animation: moveToUp 1s ease-out 1s;
   position: relative;
   animation-fill-mode: backwards;
+  text-decoration: none;
+  cursor: pointer;
 
   &::after {
     content: "";
@@ -37,4 +39,33 @@
     transform: translateY(-0.3rem); /* -1px */
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); /* 0 5px 5px */
   }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: 1.6rem;
+    color: rgb(0, 207, 0);
+    text-decoration: none;
+    border-bottom: 1px solid rgb(0, 207, 0);
+    padding: 3px;
+  }
+  &:hover {
+    background-color: rgb(0, 207, 0);
+    color: white;
+    box-shadow: 0 1rem 2rem rgba(black, 0.15);
+    transform: translateY(-2px);
+  }
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba(black, 0.15);
+    transform: translateY(-2px);
+  }
+}
+.btn--green {
+  background-color: #55c57a;
+  color: white;
+  &::after {
+    background-color: #55c57a;
+}
+
 }

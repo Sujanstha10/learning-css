@@ -1,7 +1,10 @@
+.grid {
+  margin-top: 5rem;
+}
 .row {
   max-width: 114rem; /* Maximum width of the row */
   margin: 0 auto; /* Center-aligns the row */
-  background-color: #eee; /* Light gray background */
+  background-color: transparent; /* Light gray background */
 
   &:not(:last-child) {
     margin-bottom: 8rem; /* Adds spacing between rows */
@@ -11,43 +14,63 @@
   @include clearFix;
 
   [class^="row-"] {
-    background-color: aqua; /* Sets background color for row items */
+    // background-color: aqua; /* Sets background color for row items */
     float: left; /* Floats the columns for a horizontal layout */
 
     &:not(:last-child) {
-      margin-right: 6rem; /* Adds spacing between columns */
+      margin-right: 7rem; /* Adds spacing between columns */
     }
   }
 
   // Styles for .row-1: splits into two columns
   .row-1 {
     width: calc(
-      (100% - #{6rem}) / 2
-    ); /* Two equal columns with 6rem space between them */
+      (100% - 7rem) / 2
+    ); /* Two equal columns with 7rem space between them */
   }
 
   // Styles for .row-2: three columns where first takes 1/3 and second combines 2/3
   .row-2 {
     &:first-child {
-      width: calc((100% - 2 * 6rem) / 3); /* 1/3 of the total width */
+      width: calc((100% - 2 * 7rem) / 3); /* 1/3 of the total width */
     }
 
     &:last-child {
       width: calc(
-        2 * ((100% - 2 * 6rem) / 3) + 6rem
+        2 * ((100% - 2 * 7rem) / 3) + 7rem
       ); /* 2/3 width for the combined second and third columns */
     }
   }
 
   // Styles for .row-3: splits into three equal columns
   .row-3 {
-    width: calc(
-      (100% - 2 * #{6rem}) / 3
-    ); /* Three equal columns with spacing */
+    width: calc((100% - 2 * 7rem) / 3); /* Three equal columns with spacing */
   }
 
   // Styles for .row-4: splits into four equal columns
   .row-4 {
-    width: calc((100% - 3 * #{6rem}) / 4); /* Four equal columns with spacing */
+    width: calc((100% - 3 * 7rem) / 4); /* Four equal columns with spacing */
+  }
+  .row-5 {
+    &:first-child {
+      width: calc((100% - 3 * 7rem) / 4); /* 1/3 of the total width */
+    }
+
+    &:last-child {
+      width: calc(
+        3 * ((100% - 3 * 7rem) / 4) + 2 * 7rem
+      ); /* 2/3 width for the combined second and third columns */
+    }
+  }
+  .row-6 {
+    &:not(:last-child) {
+      width: calc((100% - 3 * 7rem) / 4); /* 1/3 of the total width */
+    }
+
+    &:last-child {
+      width: calc(
+        ((100% - 7rem) / 4) * 2
+      ); /* 2/3 width for the combined second and third columns */
+    }
   }
 }
