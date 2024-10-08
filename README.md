@@ -1,5 +1,4 @@
-
-# Website Development Project
+# Learning css using scss
 
 ## Overview
 
